@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 
-namespace Sprache
-{
+namespace Sprache;
+
     /// <summary>
     /// Represents a commented result with its leading and trailing comments.
     /// </summary>
@@ -23,4 +23,3 @@ namespace Sprache
         /// </summary>
         IEnumerable<string> TrailingComments { get; }
     }
-}

@@ -1,7 +1,7 @@
 ﻿using System;
 
-namespace Sprache
-{
+namespace Sprache;
+
     internal static class ResultHelper
     {
         public static IResult<U> IfSuccess<T, U>(this IResult<T> result, Func<IResult<T>, IResult<U>> next)
@@ -23,4 +23,3 @@ namespace Sprache
                 : next(result);
         }
     }
-}

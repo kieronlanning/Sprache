@@ -2,8 +2,8 @@
 using System.Globalization;
 using Xunit;
 
-namespace Sprache.Tests
-{
+namespace Sprache.Tests;
+
     public class DecimalTests : IDisposable
     {
         private static readonly Parser<string> DecimalParser = Parse.Decimal.End();
@@ -53,4 +53,3 @@ namespace Sprache.Tests
         }
 
     }
-}

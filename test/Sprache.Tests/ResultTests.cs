@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using Xunit;
 
-namespace Sprache.Tests
-{
+namespace Sprache.Tests;
+
     public class ResultTests
     {
         [Fact]
@@ -27,4 +27,3 @@ namespace Sprache.Tests
             Assert.Equal(expectedMessage, r.ToString());
         }
     }
-}

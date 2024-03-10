@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.IO;
 
-namespace TinyTemplates
-{
+namespace TinyTemplates;
+
     class IterationTemplateNode : TemplateNode
     {
         readonly TemplateMemberAccessor _templateMemberAccessor;
@@ -27,4 +27,3 @@ namespace TinyTemplates
             }
         }
     }
-}

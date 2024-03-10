@@ -1,8 +1,8 @@
 ﻿using System;
 using Xunit;
 
-namespace Sprache.Tests
-{
+namespace Sprache.Tests;
+
     public class InputTests
     {
         [Fact]
@@ -135,4 +135,3 @@ namespace Sprache.Tests
             });
         }
     }
-}

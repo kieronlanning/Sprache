@@ -2,8 +2,8 @@
 using System.Linq;
 using Xunit;
 
-namespace Sprache.Tests
-{
+namespace Sprache.Tests;
+
     public class ParseRefTests
     {
         private static Parser<string> ParserHash = Parse.String("#").Text().Named("something");
@@ -107,4 +107,3 @@ namespace Sprache.Tests
             Assert.Throws<ParseException>(() => ABSeq.End().TryParse("baba"));
         }
     }
-}

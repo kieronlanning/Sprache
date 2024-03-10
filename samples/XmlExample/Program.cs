@@ -5,8 +5,8 @@ using System.Text;
 using Sprache;
 using System.IO;
 
-namespace XmlExample
-{
+namespace XmlExample;
+
     public class Document
     {
         public Node Root;
@@ -109,4 +109,3 @@ namespace XmlExample
             Console.ReadKey(true);
         }
     }
-}

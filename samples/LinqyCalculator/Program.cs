@@ -1,8 +1,8 @@
 ﻿using System;
 using Sprache;
 
-namespace LinqyCalculator
-{
+namespace LinqyCalculator;
+
     class Program
     {
         static void Main()
@@ -41,4 +41,3 @@ namespace LinqyCalculator
             }
         }
     }
-}

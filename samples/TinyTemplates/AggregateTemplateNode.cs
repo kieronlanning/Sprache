@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.IO;
 
-namespace TinyTemplates
-{
+namespace TinyTemplates;
+
     class AggregateTemplateNode : TemplateNode
     {
         readonly IEnumerable<TemplateNode> _content;
@@ -18,4 +18,3 @@ namespace TinyTemplates
                 element.Execute(model, output);
         }
     }
-}

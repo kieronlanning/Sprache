@@ -2,8 +2,8 @@
 using System.Linq.Expressions;
 using Xunit;
 
-namespace Sprache.Tests.Scenarios
-{
+namespace Sprache.Tests.Scenarios;
+
     public class ExpressionGrammarTests
     {
         [Fact]
@@ -69,4 +69,3 @@ namespace Sprache.Tests.Scenarios
         static readonly Parser<Expression<Func<double>>> Lambda =
             Expr.End().Select(body => Expression.Lambda<Func<double>>(body));
     }
-}

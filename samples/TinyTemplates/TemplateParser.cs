@@ -1,8 +1,8 @@
 ﻿using System.Linq;
 using Sprache;
 
-namespace TinyTemplates
-{
+namespace TinyTemplates;
+
     static class TemplateParser
     {
         static readonly Parser<char> Hash = Parse.Char('#');
@@ -61,4 +61,3 @@ namespace TinyTemplates
             return Aggregate.End().Parse(templateText);
         }
     }
-}

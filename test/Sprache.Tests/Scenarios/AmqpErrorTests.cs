@@ -5,8 +5,8 @@ using System.Globalization;
 using System.Linq;
 using Xunit;
 
-namespace Sprache.Tests.Scenarios
-{
+namespace Sprache.Tests.Scenarios;
+
     public class AmqpErrorTests
     {
         static readonly Parser<char> itemSeparator = Parse.Char(',');
@@ -150,6 +150,5 @@ namespace Sprache.Tests.Scenarios
             return Value.ToString(CultureInfo.InvariantCulture);
         }
     }
-}
 
 // ReSharper restore InconsistentNaming

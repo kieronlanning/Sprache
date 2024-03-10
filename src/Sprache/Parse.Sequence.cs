@@ -1,5 +1,5 @@
-﻿namespace Sprache
-{
+﻿namespace Sprache;
+
     using System;
     using System.Collections.Generic;
     using System.Linq;
@@ -125,7 +125,7 @@
                     else
                         exp = $"'{StringExtensions.Join(", ", r.Expectations)}' between {minimumCount.Value} and {maximumCount.Value} times, but found {count}";
 
-                    return Result.Failure<IEnumerable<T>>(i, msg, new[] { exp });
+                    return Result.Failure<IEnumerable<T>>(i, msg, [exp]);
                 }
 
                 return Result.Success<IEnumerable<T>>(result, remainder);
@@ -155,4 +155,3 @@
                    select item;
         }
     }
-}

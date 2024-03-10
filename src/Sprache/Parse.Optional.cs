@@ -1,7 +1,7 @@
 ﻿using System;
 
-namespace Sprache
-{
+namespace Sprache;
+
     partial class Parse
     {
         /// <summary>
@@ -77,4 +77,3 @@ namespace Sprache
             };
         }
     }
-}

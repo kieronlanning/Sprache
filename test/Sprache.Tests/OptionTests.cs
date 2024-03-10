@@ -1,7 +1,7 @@
 using Xunit;
 
-namespace Sprache.Tests
-{
+namespace Sprache.Tests;
+
     public class OptionTests
     {
         private Parser<IOption<char>> ParserOptionalSelect = Parse.Char('a').Optional().Select(o => o.Select(c => char.ToUpperInvariant(c)));
@@ -30,4 +30,3 @@ namespace Sprache.Tests
         [Fact]
         public void TestSelectManyLinq() => AssertParser.SucceedsWith(ParserOptionalLinq, "ab", o => AssertSome(o, "ba"));
     }
-}

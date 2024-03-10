@@ -1,8 +1,8 @@
 ﻿using Xunit;
 using System;
 
-namespace Sprache.Tests.Scenarios
-{
+namespace Sprache.Tests.Scenarios;
+
     public class StarDateTest
     {
         static readonly Parser<DateTime> StarTrek2009_StarDate =
@@ -23,4 +23,3 @@ namespace Sprache.Tests.Scenarios
             Assert.Throws<ParseException>(() => { var date = StarTrek2009_StarDate.Parse("2259.4000"); });
         }
     }
-}

@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.IO;
 
-namespace TinyTemplates
-{
+namespace TinyTemplates;
+
     class LiteralTemplateNode : TemplateNode
     {
         readonly string _text;
@@ -19,4 +19,3 @@ namespace TinyTemplates
             output.Write(_text);
         }
     }
-}

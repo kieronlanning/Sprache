@@ -2,8 +2,8 @@
 using System.Linq;
 using Xunit;
 
-namespace Sprache.Tests
-{
+namespace Sprache.Tests;
+
     public class ParseTests
     {
         [Fact]
@@ -707,4 +707,3 @@ namespace Sprache.Tests
             Assert.Empty(result.TrailingComments);
         }
     }
-}

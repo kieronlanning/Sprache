@@ -1,5 +1,5 @@
-﻿namespace Sprache
-{
+﻿namespace Sprache;
+
     partial class Parse
     {
         /// <summary>
@@ -31,4 +31,3 @@
                 select firstLetter + tail;
         }
     }
-}

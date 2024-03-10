@@ -1,5 +1,5 @@
-﻿namespace Sprache
-{
+﻿namespace Sprache;
+
     /// <summary>
     /// Represents a text span of the matched result.
     /// </summary>
@@ -26,4 +26,3 @@
         /// </summary>
         int Length { get; }
     }
-}

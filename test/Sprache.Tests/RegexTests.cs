@@ -3,8 +3,8 @@ using System.Reflection;
 using System.Text.RegularExpressions;
 using Xunit;
 
-namespace Sprache.Tests
-{
+namespace Sprache.Tests;
+
     /// <summary>
     /// These tests exist in order to verify that the modification that is applied to
     /// the regex passed to every call to the <see cref="Parse.Regex(string,string)"/>
@@ -84,8 +84,7 @@ namespace Sprache.Tests
                                     "\"OptimizeRegex\" in the Parse class. Has it been renamed?");
             }
 
-            var optimizedRegex = (Regex)_optimizeRegexMethod.Invoke(null, new object[] { regex });
+            var optimizedRegex = (Regex)_optimizeRegexMethod.Invoke(null, [regex]);
             return optimizedRegex;
         }
     }
-}

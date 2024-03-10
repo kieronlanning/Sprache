@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using Xunit;
 
-namespace Sprache.Tests.Scenarios
-{
+namespace Sprache.Tests.Scenarios;
+
     public static class AssemblerParser
     {
         public static Parser<string> Identifier = Parse.Identifier(Parse.Letter, Parse.LetterOrDigit);
@@ -87,14 +87,14 @@ namespace Sprache.Tests.Scenarios
         public void CanParseIntruction()
         {
             AssertParser.SucceedsWith(AssemblerParser.Assembler, "mov a,b",
-                lines => Assert.Equal(new AssemblerLine(null, "mov", new[] { "a", "b" }, null), lines.Single()));
+                lines => Assert.Equal(new AssemblerLine(null, "mov", ["a", "b"], null), lines.Single()));
         }
 
         [Fact]
         public void CanParseIntructionWithSpaces()
         {
             AssertParser.SucceedsWith(AssemblerParser.Assembler, " mov   a , b ",
-                lines => Assert.Equal(new AssemblerLine(null, "mov", new[] { "a", "b" }, null), lines.Single()));
+                lines => Assert.Equal(new AssemblerLine(null, "mov", ["a", "b"], null), lines.Single()));
         }
 
         [Fact]
@@ -102,7 +102,7 @@ namespace Sprache.Tests.Scenarios
         {
             AssertParser.SucceedsWith(AssemblerParser.Assembler, "  label:  mov   a  ,  b  ;  comment  ",
                 lines =>
-                    Assert.Equal(new AssemblerLine("label", "mov", new[] { "a", "b" }, "  comment  "), lines.Single()));
+                    Assert.Equal(new AssemblerLine("label", "mov", ["a", "b"], "  comment  "), lines.Single()));
         }
 
         [Fact]
@@ -113,12 +113,11 @@ namespace Sprache.Tests.Scenarios
                         label:  
                         mov   a  ,  b;",
                 lines => Assert.Equal(
-                    new[]
-                    {
+                    [
                         new AssemblerLine(null, null, null, "multiline sample"),
                         new AssemblerLine("label", null, null, null),
-                        new AssemblerLine(null, "mov", new[] {"a", "b"}, "")
-                    },
+                        new AssemblerLine(null, "mov", ["a", "b"], "")
+                    ],
                     lines));
         }
     }
@@ -171,4 +170,3 @@ namespace Sprache.Tests.Scenarios
                 Comment == null ? "" : ";" + Comment);
         }
     }
-}

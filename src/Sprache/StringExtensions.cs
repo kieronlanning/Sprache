@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 
-namespace Sprache
-{
+namespace Sprache;
+
     internal static class StringExtensions
     {
         public static IEnumerable<char> ToEnumerable(this string @this)
@@ -27,4 +27,3 @@ namespace Sprache
 #endif
         }
     }
-}

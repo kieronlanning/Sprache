@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Sprache
-{
+namespace Sprache;
+
     /// <summary>
     /// Represents an input for parsing.
     /// </summary>
@@ -50,4 +50,3 @@ namespace Sprache
         /// </summary>
         IDictionary<object, object> Memos { get; }
     }
-}

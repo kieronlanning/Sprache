@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Reflection;
 
-namespace TinyTemplates
-{
+namespace TinyTemplates;
+
     class TemplateMemberAccessor
     {
         readonly IEnumerable<string> _memberPath;
@@ -18,13 +18,10 @@ namespace TinyTemplates
             var r = model.Peek();
             foreach (var memberName in _memberPath)
             {
-                var mi = r.GetType().GetTypeInfo().GetProperty(memberName, BindingFlags.IgnoreCase | BindingFlags.Instance | BindingFlags.Public | BindingFlags.GetProperty);
-                if (mi == null)
-                    throw new ArgumentException(string.Format("The property '{0}' does not exist.", memberName));
-                r = mi.GetValue(r, null);
+                var mi = r.GetType().GetTypeInfo().GetProperty(memberName, BindingFlags.IgnoreCase | BindingFlags.Instance | BindingFlags.Public | BindingFlags.GetProperty) ?? throw new ArgumentException(string.Format("The property '{0}' does not exist.", memberName));
+			r = mi.GetValue(r, null);
             }
 
             return r;
         }
     }
-}

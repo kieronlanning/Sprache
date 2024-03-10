@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.IO;
 
-namespace TinyTemplates
-{
+namespace TinyTemplates;
+
     /// <summary>
     /// Text templating engine in a file.
     /// </summary>
@@ -44,4 +44,3 @@ namespace TinyTemplates
             return sw.ToString();
         }
     }
-}

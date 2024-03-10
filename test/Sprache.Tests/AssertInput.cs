@@ -1,7 +1,7 @@
 ﻿using System;
 
-namespace Sprache.Tests
-{
+namespace Sprache.Tests;
+
     static class AssertInput
     {
         public static IInput AdvanceMany(this IInput input, int count)
@@ -28,4 +28,3 @@ namespace Sprache.Tests
             return result;
         }
     }
-}

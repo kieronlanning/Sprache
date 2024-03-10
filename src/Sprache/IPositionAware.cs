@@ -1,6 +1,6 @@
 ﻿
-namespace Sprache
-{
+namespace Sprache;
+
     /// <summary>
     /// An interface for objects that have a source <see cref="Position"/>.
     /// </summary>
@@ -15,4 +15,3 @@ namespace Sprache
         /// <returns>The matched result.</returns>
         T SetPos(Position startPos, int length);
     }
-}

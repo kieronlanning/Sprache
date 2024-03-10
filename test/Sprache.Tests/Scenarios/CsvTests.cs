@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using Xunit;
 
-namespace Sprache.Tests.Scenarios
-{
+namespace Sprache.Tests.Scenarios;
+
     public class CsvTests
     {
         static readonly Parser<char> CellSeparator = Parse.Char(',');
@@ -161,4 +161,3 @@ namespace Sprache.Tests.Scenarios
             Assert.Equal("a\"b", r.First().First());
         }
     }
-}

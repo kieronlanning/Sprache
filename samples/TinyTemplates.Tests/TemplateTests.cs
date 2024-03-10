@@ -1,8 +1,8 @@
 ﻿using System;
 using Xunit;
 
-namespace TinyTemplates.Tests
-{
+namespace TinyTemplates.Tests;
+
     public class TemplateTests
     {
         static readonly DateTime SaturdayInSeptember = new DateTime(2010, 9, 4);
@@ -60,7 +60,7 @@ namespace TinyTemplates.Tests
         public void IterationCollectsElements()
         {
             var tt = new Template("#|Days#DayOfWeek#.");
-            var m = new Model1 {Days = new[] {SaturdayInSeptember, SaturdayInSeptember.AddDays(1)}};
+            var m = new Model1 {Days = [SaturdayInSeptember, SaturdayInSeptember.AddDays(1)]};
             var o = tt.Execute(m);
             Assert.Equal("SaturdaySunday", o);
         }
@@ -81,10 +81,9 @@ namespace TinyTemplates.Tests
             var m = new Model1
                         {
                             DateTime1 = SaturdayInSeptember,
-                            Days = new[] { SaturdayInSeptember, SaturdayInSeptember.AddDays(1) }
+                            Days = [SaturdayInSeptember, SaturdayInSeptember.AddDays(1)]
                         };
             var o = tt.Execute(m);
             Assert.Equal("SaturdaySaturday", o);
         }
     }
-}

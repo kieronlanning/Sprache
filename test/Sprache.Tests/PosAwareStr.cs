@@ -1,5 +1,5 @@
-﻿namespace Sprache.Tests
-{
+﻿namespace Sprache.Tests;
+
     class PosAwareStr : IPositionAware<PosAwareStr>
     {
         public PosAwareStr SetPos(Position startPos, int length)
@@ -27,4 +27,3 @@
             set;
         }
     }
-}

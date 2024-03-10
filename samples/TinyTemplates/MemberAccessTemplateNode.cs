@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.IO;
 
-namespace TinyTemplates
-{
+namespace TinyTemplates;
+
     class MemberAccessTemplateNode : TemplateNode
     {
         readonly TemplateMemberAccessor _member;
@@ -17,4 +17,3 @@ namespace TinyTemplates
             output.Write(_member.GetMember(model));
         }
     }
-}
